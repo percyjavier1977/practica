@@ -1,0 +1,76 @@
+/* Estilo general del nav */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block; /* Elementos de lista en bloque */
+    text-align: center; /* Centra los elementos en el nav */
+}
+
+nav ul li {
+    display: inline; /* Elementos de lista en línea */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block; /* Hace que el enlace ocupe el espacio interno */
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Estilo para la Hero Image */
+.hero {
+    background-image: url('imagen.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    height: 600px; /* Altura de la Hero Image */
+    position: relative; /* Posiciona el contenedor para colocar el contenido dentro */
+    color: white;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilo para el contenido de la Hero */
+.hero-content {
+    position: absolute; /* Permite posicionar el contenido en el centro de la sección */
+    top: 50%; /* Posiciona el contenido a la mitad desde la parte superior */
+    left: 50%; /* Posiciona el contenido a la mitad desde la izquierda */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrarlo exactamente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0 0 20px 0;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+.cta {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta:hover {
+    background-color: #e64a19;
+}
