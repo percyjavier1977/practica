@@ -1,0 +1,173 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten al tamaño total de los elementos */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente predeterminada */
+    background-color: #f4f4f9; /* Color de fondo suave para la página */
+    color: #333; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+h1, h2 {
+    color: #333; /* Color de los títulos */
+}
+
+section {
+    padding: 40px; /* Espaciado interno de cada sección */
+    margin: 20px 0; /* Margen entre las secciones */
+}
+
+/* Navegación */
+nav {
+    background-color: #333; /* Fondo oscuro para la barra de navegación */
+    color: white; /* Color del texto del menú */
+    padding: 15px; /* Espaciado interno */
+    position: sticky; /* Hace que la barra de navegación se quede fija al hacer scroll */
+    top: 0; /* Posición fija en la parte superior */
+    z-index: 100; /* Asegura que la barra esté por encima de otros elementos */
+}
+
+nav ul {
+    display: flex; /* Muestra los elementos de la lista en una fila */
+    justify-content: center; /* Centra los elementos dentro de la barra de navegación */
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+nav li {
+    margin: 0 20px; /* Espacio entre los elementos del menú */
+}
+
+nav a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-size: 18px; /* Tamaño de la fuente */
+    transition: color 0.3s ease; /* Transición suave al cambiar el color al pasar el mouse */
+}
+
+nav a:hover {
+    color: #25D366; /* Cambia el color al pasar el mouse */
+}
+
+/* Hero Section */
+#hero {
+    position: relative; /* Permite posicionar contenido dentro de esta sección */
+    background-image: url('https://via.placeholder.com/1500x800'); /* Imagen de fondo (puedes cambiarla por la que desees) */
+    background-size: cover; /* Hace que la imagen de fondo cubra toda la sección */
+    background-position: center; /* Centra la imagen de fondo */
+    height: 60vh; /* La altura de la sección será el 60% de la altura de la ventana */
+}
+
+.hero-content {
+    position: absolute; /* Posiciona este contenido dentro de la sección con la imagen */
+    top: 50%; /* Centra verticalmente el contenido */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el contenido para que esté perfectamente centrado */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    color: white; /* Color del texto */
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 50% para mejorar la visibilidad del texto */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.hero-content h1 {
+    font-size: 40px; /* Tamaño grande para el título */
+}
+
+.hero-content p {
+    font-size: 20px; /* Tamaño del texto de descripción */
+    margin-top: 10px; /* Espacio entre el título y la descripción */
+}
+
+.cta-button {
+    display: inline-block; /* El botón será un bloque en línea para ajustarse al contenido */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    background-color: #25D366; /* Color de fondo del botón */
+    color: white; /* Color del texto dentro del botón */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    margin-top: 20px; /* Espacio superior */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.cta-button:hover {
+    background-color: #128C7E; /* Cambia el color del botón al pasar el mouse */
+}
+
+/* Estilos para las secciones */
+#about, #services, #contact {
+    background-color: white; /* Fondo blanco para las secciones */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto de elevación */
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed; /* Posición fija para que esté siempre visible */
+    bottom: 20px; /* A 20px del borde inferior */
+    right: 20px; /* A 20px del borde derecho */
+    z-index: 100; /* Asegura que el botón esté sobre otros elementos */
+    background-color: #25D366; /* Color de fondo del botón */
+    border-radius: 50%; /* Hace el botón redondo */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    display: flex; /* Utiliza Flexbox para centrar el icono dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave para el botón */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos de transición para el hover */
+}
+
+.whatsapp-float img {
+    width: 30px; /* Tamaño del icono de WhatsApp */
+    height: 30px; /* Tamaño del icono de WhatsApp */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Aumenta la sombra del botón */
+}
+
+/* Media query para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+    /* Cambiar el diseño del menú a columna */
+    nav ul {
+        flex-direction: column; /* Coloca los elementos del menú en una columna */
+        align-items: center; /* Alinea los elementos al centro */
+    }
+
+    /* Reducir el tamaño de las fuentes para pantallas pequeñas */
+    nav a {
+        font-size: 16px; /* Reducir el tamaño de la fuente */
+        margin: 10px 0; /* Espaciado entre los enlaces */
+    }
+
+    .hero-content h1 {
+        font-size: 30px; /* Reducir el tamaño del título */
+    }
+
+    .hero-content p {
+        font-size: 18px; /* Reducir el tamaño del texto */
+    }
+
+    .cta-button {
+        padding: 8px 16px; /* Reducir el tamaño del botón */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (teléfonos más pequeños) */
+@media (max-width: 480px) {
+    /* Cambiar el tamaño del botón flotante para pantallas pequeñas */
+    .whatsapp-float {
+        width: 50px; /* Reducir el tamaño del botón */
+        height: 50px; /* Reducir el tamaño del botón */
+    }
+
+    .whatsapp-float img {
+        width: 25px; /* Reducir el tamaño del icono */
+        height: 25px; /* Reducir el tamaño del icono */
+    }
+}
